@@ -1,0 +1,690 @@
+  
+  /* ====================== Variables */
+  
+  :root {
+    
+    /* == Colors == */
+    --colorTitulo: #ffffff;
+    --colorSubTitulo: #f0f0f0;
+    --colorSubTituloPq: #ddd;
+    --colorTexto: #000;
+    
+    
+    /* == Text sizes == */
+    --sizeTitulo: 2.1rem;
+    --sizeSubTitulo: 1.8rem;
+    --sizeSubTituloPq: 1.5rem;
+    --sizeTexto: 0.8rem;
+    
+  }
+  
+  
+  
+  /* Tablet */
+  @media (min-width: 768px) {
+    
+    :root {
+      
+      /* == Text sizes == */
+      --tituloSize: 2rem;
+      --textoSize: 1.2rem;
+      
+    }
+    
+  }
+  
+  
+  
+  /* Computadora */
+  @media (max-width: 1000px) {
+    :root {
+      /* == Text sizes == */
+      --tituloSize: 1.8rem;
+      --textoSize: 1.1rem;
+    }
+    
+  }
+  
+  
+  
+  
+  
+  
+/*====================== Estilos Generales */
+  
+	*{
+	  
+		box-sizing:border-box;
+		text-align:center;
+		margin:0;
+		padding:0;
+		
+	}
+	
+	
+	
+	body {
+	  
+	  background: #000;
+	  display:flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content:center;
+		font-family: monospace;
+ 
+	}
+	
+	
+	
+	img{
+	  
+	  max-width:10vw;
+	  
+	}
+	
+	
+	h1{
+	  
+	  color: var(--colorTitulo);
+	  font-size: var(--sizeTitulo);
+	  
+	}
+	
+	
+	h2{
+	  
+	  color: var(--colorSubTitulo);
+	  font-size: var(--sizeSubTitulo);
+	  
+	}
+	
+	
+	h3{
+	  
+	  color: var(--colorSubTituloPq);
+	  font-size: var(--sizeSubTituloPq);
+	  
+	}
+	
+	
+	p{
+	  
+	  color: var(--colorTexto);
+	  font-size: var(--sizeTexto);
+	  
+	}
+	
+	
+	a{
+	  
+	  text-decoration:none;
+	  color:#fff;
+	  
+	}
+	
+	
+	
+	.panel {
+	  
+	  background: linear-gradient(#345, #012);
+	  
+	  color:#222;
+		width:100vw;
+		max-height:100vh;
+		height:100vh;
+		overflow:hidden;
+		
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content:center;
+		
+	}
+	
+	
+	
+	
+	
+/*====================== Efectos y animaciones */
+	
+	
+	.fadeIn {
+		
+		transform:scaleX(1);
+		opacity:1;
+		transition: all 0.2s ease-in-out;
+		
+	}
+	
+	
+	.fadeOut {
+	  
+	  transform:scaleX(0.4);
+		opacity:0;
+		transition: all 0.2s ease-in-out;
+	  
+	}
+	
+	
+	.fadeIn .entraIzquierda{
+	  
+    animation-name: fadeInIzquierdo;
+    animation-duration: 1.5s;
+	  
+	}
+	
+	
+	.fadeIn .entraDerecha{
+	  
+    animation-name: fadeInDerecho;
+    animation-duration: 1.5s;
+	  
+	}
+	
+	
+	.fadeIn .entraAbajo{
+	  
+    animation-name: fadeInArriba;
+    animation-duration: 1.5s;
+	  
+	}
+	
+	
+	
+	
+	
+/*====================== Estilos de portada */
+  
+	.portada {
+	  
+		background-image: linear-gradient(to top, rgba(14,17,22,.65), rgba(14,17,22,.2)), url('img/portada.png');
+		background-size: cover;
+		background-position: center;
+		
+		color: #fff;
+		
+	  display:flex;
+	  flex-direction:column;
+	  align-items:flex-start;
+	  justify-content:center;
+		
+	}
+	
+	
+	
+	.boxInPortada{
+	  
+		max-width:98%;
+	  width:400px;
+	  height:300px;
+	  
+	  margin:20px;
+	  
+	}
+	
+	
+	.boxInPortada, .boxInPortada h2, .boxInPortada h1, .boxInPortada p{
+	  
+	  padding:0;
+	  text-align:left;
+	  display:flex;
+	  flex-direction:column;
+	  align-items:flex-start;
+	  justify-content:center;
+	  
+	}
+	
+	
+	
+	.portada .tituloBox{
+	  
+		display: grid; gap: 6px;
+	  
+	}
+	
+	
+	.portada h1{
+	  
+    text-shadow: 0 4px 24px rgba(0,0,0,.35);
+	  font-size: var(--sizeTitulo);
+	  
+	}
+	
+	
+	.portada h2{
+	  
+	  font-size: var(--sizeSubTitulo);
+	  
+	}
+	
+	
+	.portada p{
+	  
+	  font-size: var(--sizeSubTituloPq);
+	  margin:10px;
+	  margin-bottom:20px;
+	  color: var(--colorSubTitulo);
+	  
+	}
+	
+	
+	.portada a{
+	  
+	  border-bottom:1px solid #fff;
+	  border-radius:25px;
+	  background:rgba(0, 0, 0, 0.7);
+	  padding:15px;
+	  padding:20px;
+	  
+	}
+	
+	
+	
+	
+	
+/*====================== Estilos del main */
+  
+  /*===== Sobre nosotros */
+  .sobreMiBox{
+    
+    padding:10px;
+		display:flex;
+		border:1px solid red:
+    
+  }
+ 
+
+  .sobreMiBox h2{
+
+		font-size: 1.5rem;
+		margin:10px;
+  
+  }
+  
+  .sobreMiBox p{
+    
+    text-align:left;
+    padding:5px;
+		color:#fff;
+    
+    font-family: monospace;
+		font-size: 0.85rem;
+    display: inline-block;
+    line-height: 1.2;
+    
+  }
+  
+  .sobreMiBox h3{
+
+		margin:20px;
+		margin-bottom:10px;
+		text-align:left;
+		font-size: 1.2rem;
+    
+  }
+  
+  .sobreMiBox ul{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding-bottom:15px;
+    
+  }
+  
+  .sobreMiBox li{
+    
+	  color: #fff;
+	  font-size: var(--sizeTexto);	 
+    text-align:left;
+		width:90%;
+    
+  }
+  
+  
+  
+  
+  /*===== Servicio y portafolio*/
+  .serviciosBox{
+    
+  }
+  
+  
+  .portafolioBox .subBox, .serviciosBox .subBox{
+    
+		height:20%;
+		width:95%;
+		padding-top:10px;
+		
+		display:flex;
+		flex-direction:column;
+		justify-content:space-around;
+    
+  }
+  
+  
+  .serviciosBox h2{
+    
+  }
+  
+  .serviciosBox h3{
+    
+  }
+  
+  
+  .serviciosBox .subBox p, .portafolioBox .subBox p{
+    
+    font-weight:700;
+    color:#bfffef;
+    text-align:center;
+		font-size:1.1rem;
+		text-shadow:.5px .5px 0px #000;
+  }
+  
+  
+	.scrollBoxPanel{
+	  
+		height:80%;
+		width:98%;
+		overflow-X:auto;
+		display:flex;
+		align-items:center;
+		
+	}
+
+
+  .portafolioBox article, .serviciosBox article{
+    
+		margin-right:20px;
+		min-width:290px;
+		height:95%;
+		padding-bottom:5px;
+		padding-left:5px;
+		
+		
+		display:flex;
+		flex-direction:column;
+		justify-content:space-around;
+    
+  }
+  
+  
+  .portafolioBox figure, .serviciosBox figure{
+    
+		height:100%;
+		width:100%;
+		
+  }
+  
+  
+  .portafolioBox img, .serviciosBox img{
+    
+		min-height:70%;
+		min-width:100%;
+		
+  }
+  
+  
+  .portafolioBox figcaption, .serviciosBox figcaption{
+    
+		height:30%;
+		background:#5b9;
+		padding:10px;
+		
+		display:flex;
+		flex-direction:column;
+		justify-content:space-around;
+		
+  }
+  
+  
+  .portafolioBox h3, .serviciosBox h3{
+    
+		font-size:1.4rem;
+		text-align:left;
+		text-shadow:1px 1px 0px #000;
+    
+  }
+  
+  
+  .portafolioBox p{
+    
+    padding:10px;
+		font-size:1.2rem;
+		text-align:left;
+		text-shadow:.5px .5px 0px #fff;
+		
+  }
+  
+  
+  .serviciosBox p{
+    
+		text-shadow:.5px .5px 0px #fff;
+		text-align:left;
+		font-size:.9rem;
+		
+  }
+  
+  
+  
+  
+  
+  /*===== Portafolio */
+  .portfolioBox{
+    
+  }
+  
+  
+  
+  
+/*====================== Eatilos del footer */
+  
+  footer{
+    
+    color:#fff;
+    
+  }
+  
+  
+  footer .contacto{
+    
+    height:80%;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    
+  }
+  
+  
+  footer .derechos{
+    
+    min-height:20%;
+    width:100%;
+    background:#000;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    
+  }
+  
+  
+  
+  footer .titularForm{
+    
+    
+    max-height:100px;
+    height:20%;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    
+  }
+  
+  
+  footer h2{
+    
+  }
+  
+  
+  footer p{
+    
+    font-size:1rem;
+    color:#fff;
+    
+  }
+  
+  
+  footer form{
+    
+    color:#fff;
+    background:rgba(0,0,0,0.2);
+    border-left:2px solid #555;
+    border-right:2px solid #555;
+    
+    max-height:450px;
+    max-width:400px;
+    height:75%;
+    width:90%;
+    
+    margin-bottom:5%;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    
+    border-radius:0px 30px 0px 30px;
+    
+  }
+  
+  
+  footer .formSubBox{
+    
+    display:flex;
+    flex-direction:column;
+    height:20%;
+    width:85%;
+    
+    margin:5px;
+    
+  }
+  
+  
+  footer .formSubBox label{
+    
+    text-align:left;
+    font-size:1.2rem;
+    
+  }
+  
+  
+  footer .formSubBox input{
+    
+    height:45%;
+    border-radius: 0px 10px 5px 0px;
+    text-align:left;
+    padding:10px;
+    
+  }
+  
+  
+  footer .formSubBox span{
+    
+    text-align:right;
+    font-size:0.7rem;
+    
+  }
+  
+  
+  footer .formSubBox textarea{
+    
+    text-align:left;
+    padding:10px;
+    
+  }
+  
+  
+  footer button{
+    
+    padding: 15px;
+    margin: 15px;
+    border-radius:15px;
+    border:none;
+    border-bottom:1px solid #0af;
+    
+  }
+  
+  
+  
+  
+  
+	
+/*====================== Efectos y animaciones */
+  
+  @keyframes fadeInDerecho {
+    
+    0%   {
+      
+      transform: translateX(30vw);
+      opacity:0;
+      
+    }
+    
+    
+    100% {
+      
+      transform: translateX(0);
+      opacity:1;
+      
+    }
+    
+  }
+  
+  
+  @keyframes fadeInIzquierdo {
+    
+    0%   {
+      
+      transform: translateX(-30vw);
+      opacity:0;
+      
+    }
+    
+    
+    100% {
+      
+      transform: translateX(0);
+      opacity:1;
+      
+    }
+    
+  }
+  
+  
+  @keyframes fadeInArriba {
+    
+    0%   {
+      
+      transform: translateY(30vw);
+      opacity:0;
+      
+    }
+    
+    
+    100% {
+      
+      transform: translateY(0);
+      opacity:1;
+      
+    }
+    
+  }
+  
+  
